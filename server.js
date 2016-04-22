@@ -97,13 +97,17 @@ function watchBattery(){
 				var obj = {
 					//alarm_sn: +new Date(),
 					alram_equipment: ret.ret.sn_key,
-					equipment_sn: ret.ret.sn_key,
+					equipment_sn: ret.ret.sn_key.toString().substr(0,10),
 					alarm_code: _alarm.alarm_code,
 					alarm_content: _alarm.content,
 					alarm_emergency_level: _alarm.alarm_type,
 					alarm_suggestion: _alarm.suggest,
-					// alarm_para1_name: _alarm.alarm,
-					// alarm_para1_value: data.ret[i].
+					alarm_para1_name: ret.ret.sn_key.toString().substr(0,10),
+					alarm_para1_value: "",
+					alarm_para2_name: ret.ret.sn_key.toString().substr(0,12),
+					alarm_para2_value: "",
+					alarm_para3_name: ret.ret.sn_key,
+					alarm_para2_value: "",
 					//alarm_occur_time: _alarm.create_time,
 					//alarm_recovered_time: _alarm.update_time,
 					//alarm_update_time: _alarm.create_time
